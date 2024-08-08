@@ -1,1 +1,1 @@
-# Prodigy-02-Stopwatch-Application
+The second task was to create a stopwatch application.
