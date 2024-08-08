@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.container{
+    background-color: rgb(47, 0, 255);
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+}
+.wrapper{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.wrapper p{
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    z-index: 9999;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+.wrapper p::before{
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(10, 152, 218);
+    z-index: -1;
+    border-radius: 50%;
+    left: -10%;
+    top: -118%;
+    animation-name: shine;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes shine{
+    0%,100%{
+        box-shadow: 0px 0px 32px -12px rgba(247, 11, 3, 0.925);
+    }
+    50%{
+        box-shadow: 0px 0px 32px 3px rgba(243, 60, 4, 0.829);
+    }
+}
+button{
+    background-color: rgb(43, 43, 187);
+    padding: 10px 38px;
+    border: 1px solid #fcfbfb;
+    border-radius: 28px;
+    color: #fcfbfb;
+    transition: all .2s ease;
+    outline: 0;
+}
+button:not(:last-child){
+    margin-right: 20px;
+}
+button:hover,
+button:focus
+{
+    border-color: #fcfbfb;
+    color: orangered;
+    box-shadow: 0px 7px 27px -12px #ffffff;
+}
+.laps {
+    margin-top: 20px;
+    color: #ffffff;
+    font-size: 24px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+.lap {
+    margin-bottom: 10px;
+}
